@@ -1,0 +1,946 @@
+.card-trip-shell {
+  max-width: 1120px;
+  margin: 24px auto 56px;
+  padding: 0 24px;
+  display: grid;
+  gap: 17px;
+  animation: content-enter 0.35s ease-out both;
+}
+.card-trip-loading {
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #526a80;
+  font-size: 14px;
+}
+.card-trip-error,
+.card-trip-inline-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 17px;
+  border: 1px solid #efc9c5;
+  border-radius: 9px;
+  background: #fff7f6;
+  color: #904a43;
+  font-size: 13px;
+}
+.card-trip-error > div {
+  flex: 1;
+}
+.card-trip-error b {
+  font-size: 14px;
+}
+.card-trip-error p {
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+.card-trip-inline-error {
+  margin: 0 0 14px;
+}
+.card-trip-admin-error {
+  max-width: 1120px;
+  margin: 0 auto 14px;
+}
+.card-trip-status-banner {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  border: 1px solid #dae8f2;
+  border-radius: 10px;
+  background: #f1f7fb;
+  color: #244966;
+}
+.card-trip-status-banner > svg {
+  width: 25px;
+  height: 25px;
+  flex: none;
+}
+.card-trip-status-banner > div {
+  display: grid;
+  gap: 4px;
+}
+.card-trip-status-banner b {
+  font-size: 15px;
+}
+.card-trip-status-banner span {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #627b90;
+}
+.card-trip-status-banner.is-complete {
+  border-color: #cfe7d7;
+  background: #f0f8f3;
+  color: #286448;
+}
+.card-trip-status-banner.is-held {
+  border-color: #f0d8af;
+  background: #fff8e9;
+  color: #805d20;
+}
+.card-trip-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.card-trip-panel {
+  min-width: 0;
+  padding: 19px 20px;
+  border: 1px solid #e1e8ef;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 7px 24px #17334a0a;
+}
+.card-trip-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 15px;
+}
+.card-trip-panel-heading > span {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 10px;
+  background: #fff3d5;
+  color: #946a00;
+}
+.card-trip-panel-heading h2 {
+  margin: 0;
+  color: #142d49;
+  font:
+    700 16px "Poppins",
+    sans-serif;
+}
+.card-trip-panel-heading p {
+  margin: 4px 0 0;
+  color: #74869a;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+.card-trip-route {
+  display: grid;
+  grid-template-columns: 1fr 26px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 11px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #f6f8fa;
+}
+.card-trip-route > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.card-trip-route > div > span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  color: #8897a5;
+}
+.card-trip-route > div > b {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  color: #142d49;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.card-trip-route > div > b svg {
+  flex: none;
+  color: #a77700;
+}
+.card-trip-route > i {
+  height: 1px;
+  background: #cbd5df;
+}
+.card-trip-goods-list {
+  display: grid;
+}
+.card-trip-goods-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #edf1f5;
+  color: #304c66;
+  font-size: 13px;
+}
+.card-trip-goods-row b {
+  font-weight: 700;
+}
+.card-trip-goods-row span {
+  color: #142d49;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.card-trip-checkpoints {
+  padding-bottom: 16px;
+}
+.card-trip-stage-list {
+  display: grid;
+}
+.card-trip-stage {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 3px;
+  border-top: 1px solid #edf1f5;
+}
+.card-trip-stage-marker {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 50%;
+  background: #eef2f5;
+  color: #8191a0;
+  font-size: 11px;
+  font-weight: 800;
+}
+.card-trip-stage-copy {
+  display: grid;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+.card-trip-stage-copy > b {
+  color: #29445e;
+  font-size: 13px;
+}
+.card-trip-stage-copy > span {
+  color: #7a8b9a;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.card-trip-stage-state {
+  flex: none;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #f0f3f6;
+  color: #778898;
+  font-size: 10px;
+  font-weight: 700;
+}
+.card-trip-stage.is-done .card-trip-stage-marker,
+.card-trip-stage.is-done .card-trip-stage-state {
+  background: #e9f5ee;
+  color: #32805a;
+}
+.card-trip-stage.is-open .card-trip-stage-marker {
+  background: #142d49;
+  color: #fff;
+}
+.card-trip-stage.is-open .card-trip-stage-state {
+  background: #fff3d5;
+  color: #966900;
+}
+.card-trip-stage.is-held .card-trip-stage-state {
+  background: #fff1e2;
+  color: #99622c;
+}
+.card-trip-action-area {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-top: 13px;
+  padding: 14px;
+  border-radius: 9px;
+  background: #f6f8fa;
+}
+.card-trip-confirm {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #405970;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.card-trip-confirm input {
+  margin-top: 2px;
+  accent-color: #197c59;
+}
+.card-trip-action-area > .button {
+  min-height: 40px;
+  white-space: nowrap;
+}
+.card-trip-flag {
+  grid-column: 1/-1;
+  padding-top: 11px;
+  border-top: 1px solid #e5eaf0;
+}
+.card-trip-flag summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  cursor: pointer;
+  color: #8d5144;
+  font-size: 11px;
+  font-weight: 700;
+  list-style: none;
+}
+.card-trip-flag summary::-webkit-details-marker {
+  display: none;
+}
+.card-trip-flag > label {
+  display: block;
+  margin: 11px 0 5px;
+  color: #526a80;
+  font-size: 11px;
+  font-weight: 700;
+}
+.card-trip-flag textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #dfe7ed;
+  border-radius: 6px;
+  font:
+    12px "Poppins",
+    sans-serif;
+  resize: vertical;
+}
+.card-trip-flag .button {
+  margin-top: 8px;
+}
+.card-trip-closed-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 13px;
+  padding: 11px 12px;
+  border-radius: 8px;
+  background: #edf7f1;
+  color: #2c7651;
+  font-size: 12px;
+  font-weight: 600;
+}
+.card-trip-closed-note.is-held {
+  background: #fff8e9;
+  color: #805d20;
+}
+.card-trip-admin-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 16px;
+}
+.card-trip-create .card-trip-panel-heading,
+.card-trip-admin-list .card-trip-panel-heading {
+  margin-bottom: 13px;
+}
+.card-trip-card-reservation {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 14px;
+  padding: 11px 12px;
+  border: 1px solid #dce7ef;
+  border-radius: 8px;
+  background: #f5f8fb;
+}
+.card-trip-card-reservation > b {
+  color: #142d49;
+  font:
+    700 13px ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  letter-spacing: 0.03em;
+}
+.card-trip-card-reservation > span {
+  color: #76899b;
+  font-size: 10.5px;
+}
+.card-trip-form-field {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  color: #3b566e;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.card-trip-form-field input,
+.card-trip-form-field select,
+.card-trip-goods-input-row input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #dce5ed;
+  border-radius: 6px;
+  background: #fff;
+  color: #24445f;
+  font:
+    400 12px "Poppins",
+    sans-serif;
+  outline: 0;
+}
+.card-trip-form-field input:focus,
+.card-trip-form-field select:focus,
+.card-trip-goods-input-row input:focus {
+  border-color: #d7a61b;
+  box-shadow: 0 0 0 3px #f6bb2525;
+}
+.card-trip-goods-editor {
+  margin-top: 16px;
+}
+.card-trip-editor-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.card-trip-editor-title > div {
+  display: grid;
+  gap: 3px;
+}
+.card-trip-editor-title b {
+  color: #304b64;
+  font-size: 12px;
+}
+.card-trip-editor-title span {
+  color: #8493a0;
+  font-size: 10px;
+}
+.card-trip-add-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border: 1px solid #dfe7ed;
+  border-radius: 6px;
+  background: #fff;
+  color: #385b76;
+  font:
+    600 10px "Poppins",
+    sans-serif;
+  cursor: pointer;
+}
+.card-trip-add-item:disabled {
+  opacity: 0.5;
+}
+.card-trip-goods-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 95px 82px 29px;
+  align-items: end;
+  gap: 7px;
+  padding: 9px 0;
+  border-top: 1px solid #edf1f5;
+}
+.card-trip-goods-input-row > label {
+  display: grid;
+  gap: 4px;
+  color: #728397;
+  font-size: 9px;
+  font-weight: 700;
+}
+.card-trip-goods-input-row input {
+  height: 36px;
+  padding: 0 7px;
+  font-size: 10px;
+}
+.card-trip-remove-item {
+  width: 28px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 5px;
+  background: #fff1ef;
+  color: #a64b43;
+  cursor: pointer;
+}
+.card-trip-destination-lock {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
+  padding: 10px;
+  border-radius: 7px;
+  background: #fff8e9;
+  color: #8d670f;
+  font-size: 11px;
+}
+.card-trip-destination-lock > b {
+  color: #624b1a;
+}
+.card-trip-destination-lock > small {
+  margin-left: auto;
+  color: #998258;
+  font-size: 9px;
+}
+.card-trip-create-submit {
+  width: 100%;
+  margin-top: 14px;
+  justify-content: center;
+}
+.card-trip-create-note {
+  margin: 9px 0 0;
+  color: #8493a0;
+  font-size: 10px;
+  line-height: 1.45;
+}
+.card-trip-queue-count {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  min-width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #f1f4f7;
+  color: #486279;
+  font-size: 11px;
+  font-weight: 700;
+}
+.card-trip-queue-list {
+  display: grid;
+  gap: 9px;
+}
+.card-trip-queue-item {
+  padding: 12px;
+  border: 1px solid #e7edf2;
+  border-radius: 8px;
+  background: #fff;
+}
+.card-trip-queue-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.card-trip-queue-top > div {
+  display: grid;
+  gap: 4px;
+}
+.card-trip-queue-top > div > b {
+  color: #243f58;
+  font:
+    700 11px ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+.card-trip-queue-top > div > span {
+  color: #76899b;
+  font-size: 10.5px;
+}
+.card-trip-queue-status {
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #eff5f9;
+  color: #42647d;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.card-trip-queue-status.status-on_hold {
+  background: #fff3d9;
+  color: #91651b;
+}
+.card-trip-queue-status.status-completed {
+  background: #eaf5ef;
+  color: #337c57;
+}
+.card-trip-queue-item > p {
+  margin: 9px 0;
+  color: #60778c;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+.card-trip-queue-item > p > b {
+  color: #b18413;
+}
+.card-trip-queue-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #edf1f5;
+  color: #788a9a;
+  font-size: 10px;
+}
+.card-trip-print-ready,
+.card-trip-closed-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #33805a;
+  font-weight: 700;
+}
+.card-trip-closed-label {
+  color: #718294;
+}
+.card-trip-flag-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  background: #fff7e9;
+  color: #825f25;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.card-trip-flag-note svg {
+  flex: none;
+  margin-top: 1px;
+}
+.card-trip-flag-note b {
+  font-weight: 700;
+}
+.card-trip-queue-empty {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #8292a1;
+  font-size: 11px;
+}
+.card-trip-queue-empty b {
+  color: #3f5a72;
+  font-size: 13px;
+}
+.card-trip-print-summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+  padding: 11px;
+  border-radius: 7px;
+  background: #f3f6f8;
+  color: #4c6a82;
+}
+.card-trip-print-summary > span {
+  display: grid;
+  gap: 3px;
+}
+.card-trip-print-summary b {
+  font-size: 11px;
+}
+.card-trip-print-summary small {
+  color: #7b8c9b;
+  font-size: 9.5px;
+  line-height: 1.45;
+}
+.card-back-heading {
+  height: 15%;
+}
+.card-back-content {
+  height: 78%;
+}
+.card-back-content .card-qr-block {
+  height: 96%;
+}
+.card-back-content .tap-rings {
+  width: 13mm;
+  height: 13mm;
+}
+@media (max-width: 900px) {
+  .card-trip-admin-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .card-trip-admin-list {
+    grid-row: 2;
+  }
+}
+@media (max-width: 650px) {
+  .card-trip-shell {
+    margin: 15px auto 36px;
+    padding: 0 13px;
+    gap: 12px;
+  }
+  .card-trip-details-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+  }
+  .card-trip-panel {
+    padding: 15px;
+  }
+  .card-trip-status-banner {
+    align-items: flex-start;
+    padding: 13px;
+  }
+  .card-trip-status-banner b {
+    font-size: 13px;
+  }
+  .card-trip-status-banner span {
+    font-size: 11px;
+  }
+  .card-trip-stage {
+    gap: 8px;
+  }
+  .card-trip-stage-state {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+  .card-trip-action-area {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .card-trip-action-area > .button {
+    width: 100%;
+    justify-content: center;
+  }
+  .card-trip-goods-input-row {
+    grid-template-columns: minmax(0, 1fr) 76px 72px 27px;
+    gap: 5px;
+  }
+  .card-trip-destination-lock {
+    flex-wrap: wrap;
+  }
+  .card-trip-destination-lock > small {
+    margin-left: 23px;
+  }
+  .card-trip-queue-foot {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .card-trip-admin-error {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .card-trip-info {
+    gap: 9px;
+  }
+  .card-trip-info p {
+    max-width: 45ch;
+  }
+}
+@media print {
+  .card-trip-admin-layout,
+  .card-trip-inline-error,
+  .transport-card-notice {
+    display: none !important;
+  }
+}
+.card-trip-goods-description-only {
+  grid-template-columns: minmax(0, 1fr) 29px;
+}
+
+.card-trip-queue-route-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+.card-trip-queue-route-row > p {
+  flex: 1;
+  min-width: 0;
+  margin: 9px 0;
+  color: #60778c;
+  font-size: 10.5px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.card-trip-queue-route-row > p > b {
+  color: #b18413;
+}
+.card-trip-delete-button {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid #efd9d5;
+  border-radius: 7px;
+  background: #fff8f7;
+  color: #ad554a;
+  cursor: pointer;
+  transition:
+    background 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease,
+    transform 0.16s ease;
+}
+.card-trip-delete-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: #e5b6af;
+  background: #fff0ee;
+  color: #923d33;
+}
+.card-trip-delete-button:focus-visible {
+  outline: 3px solid #df746633;
+  outline-offset: 2px;
+}
+.card-trip-delete-button:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
+.card-trip-confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 34, 53, 0.58);
+  backdrop-filter: blur(4px);
+  animation: card-confirm-fade 0.18s ease-out;
+}
+.card-trip-confirm-dialog {
+  position: relative;
+  box-sizing: border-box;
+  width: min(460px, 100%);
+  padding: 28px;
+  border: 1px solid #e0e8ef;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 26px 80px rgba(9, 27, 44, 0.28);
+  animation: card-confirm-rise 0.2s ease-out;
+}
+.card-trip-confirm-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 13px;
+}
+.card-trip-confirm-icon.is-release {
+  background: #fff5df;
+  color: #a67610;
+}
+.card-trip-confirm-icon.is-delete {
+  background: #fff0ee;
+  color: #a84e45;
+}
+.card-trip-confirm-close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e3e9ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #718397;
+  cursor: pointer;
+}
+.card-trip-confirm-close:hover {
+  background: #f4f7f9;
+  color: #29445e;
+}
+.card-trip-confirm-dialog > .eyebrow {
+  color: #9a7109;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+.card-trip-confirm-dialog h2 {
+  margin: 7px 0 9px;
+  color: #142d49;
+  font:
+    700 21px "Poppins",
+    sans-serif;
+}
+.card-trip-confirm-dialog > p {
+  margin: 0;
+  color: #63788d;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.card-trip-confirm-dialog > p > b {
+  color: #29445e;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.card-trip-confirm-record {
+  display: grid;
+  gap: 5px;
+  margin-top: 18px;
+  padding: 13px 14px;
+  border: 1px solid #e6edf2;
+  border-radius: 9px;
+  background: #f7f9fb;
+}
+.card-trip-confirm-record > span {
+  color: #63788d;
+  font-size: 12px;
+}
+.card-trip-confirm-record > b {
+  color: #29445e;
+  font:
+    700 11px ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+.card-trip-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #edf1f4;
+}
+.card-trip-confirm-actions .button {
+  min-height: 40px;
+}
+.card-trip-confirm-actions .button-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #a94f45;
+  background: #a94f45;
+  color: #fff;
+}
+.card-trip-confirm-actions .button-danger:hover {
+  background: #923f37;
+}
+@keyframes card-confirm-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes card-confirm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (max-width: 520px) {
+  .card-trip-confirm-backdrop {
+    padding: 14px;
+  }
+  .card-trip-confirm-dialog {
+    padding: 22px 19px;
+    border-radius: 13px;
+  }
+  .card-trip-confirm-dialog h2 {
+    font-size: 19px;
+  }
+  .card-trip-confirm-actions {
+    flex-direction: column-reverse;
+  }
+  .card-trip-confirm-actions .button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "maaf-transport-qr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "node scripts/database.mjs setup",
+    "user:create": "node scripts/database.mjs user:create"
+  },
+  "dependencies": {
+    "@next/env": "16.4.5",
+    "@zxing/browser": "^0.2.1",
+    "lucide-react": "latest",
+    "mariadb": "^3.5.4",
+    "next": "latest",
+    "qrcode": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/qrcode": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
