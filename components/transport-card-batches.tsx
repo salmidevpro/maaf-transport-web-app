@@ -75,6 +75,7 @@ export function TransportCardBatches({ onTotalChange }: { onTotalChange?: (total
       const result = await readJsonResponse<TransportProductionBatch[] | { error?: string }>(await fetch("/api/admin/transport-card-batches", { cache: "no-store", signal }), "Could not load production batches.");
       if (!Array.isArray(result)) throw new Error("The server returned invalid batch data. Refresh and try again.");
       setBatches(result);
+      setCollapsedBatches(result.map((batch) => batch.id));
     } catch (cause) {
       if (!(cause instanceof DOMException && cause.name === "AbortError")) setError(cause instanceof Error ? cause.message : "Could not load production batches.");
     } finally { if (!signal?.aborted) setLoading(false); }
@@ -116,7 +117,7 @@ export function TransportCardBatches({ onTotalChange }: { onTotalChange?: (total
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ batchDate }),
       }), "Could not create the batch.");
       setBatches((current) => [result, ...current]);
-      setCategoryBatchId(result.id);
+      setCollapsedBatches((current) => current.includes(result.id) ? current : [...current, result.id]);
       setNotice("Batch BCH" + String(result.range_start).padStart(4, "0") + " created for " + formatBatchDate(result.batch_date) + ".");
       window.setTimeout(() => setNotice(""), 4500);
     } catch (cause) { setError(cause instanceof Error ? cause.message : "Could not create the batch."); }
@@ -201,6 +202,7 @@ export function TransportCardBatches({ onTotalChange }: { onTotalChange?: (total
         body: JSON.stringify({ productionBatchId: batch.id }),
       }), "Could not delete this batch.");
       setBatches((current) => current.filter((item) => item.id !== batch.id));
+      setCollapsedBatches((current) => current.filter((id) => id !== batch.id));
       setCategoryBatchId((current) => current === batch.id ? null : current);
       setPendingBatchDelete(null);
       setNotice("Batch BCH" + String(batch.range_start).padStart(4, "0") + " deleted.");
